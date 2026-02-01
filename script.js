@@ -1,4 +1,4 @@
- // Elements
+// Elements
 const envelope = document.getElementById("envelope-container");
 const letter = document.getElementById("letter-container");
 const noBtn = document.querySelector(".no-btn");
@@ -18,6 +18,22 @@ envelope.addEventListener("click", () => {
     setTimeout( () => {
         document.querySelector(".letter-window").classList.add("open");
     },50);
+});
+
+// Logic to move the NO btn
+
+noBtn.addEventListener("mouseover", () => {
+    const min = 200;
+    const max = 200;
+
+    const distance = Math.random() * (max - min) + min;
+    const angle = Math.random() * Math.PI * 2;
+
+    const moveX = Math.cos(angle) * distance;
+    const moveY = Math.sin(angle) * distance;
+
+    noBtn.style.transition = "transform 0.3s ease";
+    noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
 });
 
 // Logic to make YES btn to grow
