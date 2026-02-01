@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url("heart-bg.jpg");
+    font-family: "Pixelify Sans", sans-serif;
 }
 
 /* Envelope Screen */
@@ -136,3 +137,4 @@ p {
     background-colour: rgba(255,240,240,0.5);
     border-radius: 12px;
 }
+
